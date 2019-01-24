@@ -1,9 +1,11 @@
 /* create app to be mounted */
-var GridFw, app;
+var GridFw, Path, app;
 
 GridFw = require('../../gridfw');
 
-app = new GridFw();
+Path = require('path');
+
+app = new GridFw(Path.join(__dirname, 'config.js'));
 
 /* main */
 app.get('/', function(ctx) {

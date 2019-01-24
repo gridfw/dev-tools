@@ -14,6 +14,7 @@ class DevTools
 	###
 	reload: (options)->
 		@_mountPath = options.mountPath || MOUNT_PATH
+		@enable()
 		return
 	###*
 	 * destroy

@@ -19,6 +19,7 @@ DevTools = class DevTools {
    */
   reload(options) {
     this._mountPath = options.mountPath || MOUNT_PATH;
+    this.enable();
   }
 
   /**
