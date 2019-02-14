@@ -1,0 +1,19 @@
+mixin renderRoutes(node)
+	ul
+		//- show methods
+		each v in node.methods
+			li
+				b #{v}
+		//- show sub routes
+		each v in node.routes
+			li
+				b #{v.path}
+				+renderRoutes(v)
+
+
+doctype
+html
+	head
+	body
+		h1 Routes:
+		+renderRoutes(routes)
